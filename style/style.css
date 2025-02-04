@@ -7,7 +7,7 @@ body {
     background-attachment: fixed; /* This makes the background image fixed */
     background-position: center;
     height: 100vh;
-    overflow: hidden; /* Prevents the body from scrolling */
+    /*overflow: hidden;*/ /* Prevents the body from scrolling */
 }
 
 .content-wrapper {
