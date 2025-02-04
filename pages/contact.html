@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/travel-recommendation/style/style.css">
+    <title>TravelBloom</title>
+</head>
+<body>
+    <div>
+        <nav>
+            <a class="logo-link" href="/travel-recommendation/index.html">
+                <img src="/travel-recommendation/img/logo.jpg" alt="" height="50px" width="50px"/><h1>TravelBloom</h1>
+            </a>
+            <ul>
+                <li><a href="/travel-recommendation/index.html" id="home">Home </a></li>
+                <li><a href="/travel-recommendation/pages/about.html" id="about">About Us </a></li>
+                <li><a href="/travel-recommendation/pages/contact.html" id="contact">Contact Us </a></li>
+            </ul>
+            <div class="top-search" style="visibility: hidden;">
+                <input type="text" id="searchInput" placeholder="Enter a destination or keyword">
+                <button id='btnSearch'>Search</button>&nbsp<button id='btnClear'>Clear</button>
+            </div>
+        </nav>
+    </div>
+
+    <div class="contact-container">
+        <div class="contact-header">
+            <h1>CONTACT US</h1>
+        </div>
+        <form class="contact-form" onsubmit="clearForm(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function clearForm(event) {
+            event.preventDefault();
+            document.querySelector('.contact-form').reset();
+        }
+    </script>
+
+    <script src="/travel-recommendation/scripts/travel_recommendation.js"></script>
+</body>
+</html>

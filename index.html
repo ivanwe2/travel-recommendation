@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>TravelBloom</title>
+</head>
+<body>
+    <div>
+        <nav>
+            <a class="logo-link" href="./index.html">
+                <img src="./img/logo.jpg" alt="" height="50px" width="50px"/><h1>TravelBloom</h1>
+            </a>
+            <ul>
+                <li><a href="./index.html" id="home">Home </a></li>
+                <li><a href="./pages/about.html" id="about">About Us </a></li>
+                <li><a href="./pages/contact.html" id="contact">Contact Us </a></li>
+            </ul>
+            <div class="top-search">
+                <input type="text" id="searchInput" placeholder="Enter a destination or keyword">
+                <button type="button" onclick="showResults()" id='btnSearch'>Search</button>&nbsp<button type="button" onclick="clearSearch()" id='btnClear'>Clear</button>
+            </div>
+        </nav>
+    </div>
+
+    <div class="home-container">
+        <div class="vertical-line"></div>
+        <div class="content">
+            <h1>WELCOME TO TRAVELBLOOM</h1>
+            <p>Your ultimate travel companion. Discover new destinations, plan your trips, and explore the world with us. Join us on an adventure of a lifetime and make unforgettable memories.</p>
+        </div>
+        <div class="results-container" id="results" style="visibility: hidden;">
+        </div>
+    </div>
+
+    <script src="./scripts/travel_recommendation.js"></script>
+</body>
+</html>
