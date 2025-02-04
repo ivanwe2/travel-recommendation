@@ -1,16 +1,21 @@
-body
-{
+body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-image: url('/travel-recommendation/img/background.jpg');
-    background-size: cover; /* This makes the image cover the entire element */
-    background-repeat: no-repeat; /* This prevents the image from repeating */
-    background-position: center; /* This centers the image */
-    height: 100vh; /* This sets the height of the element to the full viewport height */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* This makes the background image fixed */
+    background-position: center;
+    height: 100vh;
+    overflow: hidden; /* Prevents the body from scrolling */
 }
 
-nav
-{
+.content-wrapper {
+    height: 100vh;
+    overflow: auto; /* Allows the content to scroll */
+}
+
+nav {
     background-color: green;
     padding: 20px;
     display: flex;
@@ -20,43 +25,33 @@ nav
     justify-content: space-between;
 }
 
-.logo-link
-{
+.logo-link {
     display: flex;
     align-items: center;
     text-decoration: none;
 }
 
 .logo-link img {
-    margin-right: 0.5rem; /* Adjust the spacing between the image and the heading */
+    margin-right: 0.5rem;
 }
 
 .logo-link h1 {
     margin: 0;
     font-size: 1.5rem;
-    color: #333; /* Adjust the color as needed */
     color: white;
 }
 
-nav ul
-{
+nav ul {
     list-style-type: none;
-    /* padding: 0; */
-}
-
-nav ul 
-{
     align-items: center;
 }
 
-nav ul li 
-{
+nav ul li {
     display: inline;
     margin-right: 10px;
 }
 
-nav a 
-{
+nav a {
     text-decoration: none;
     color: whitesmoke;
     font-weight: bold;
@@ -83,49 +78,38 @@ nav a
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 4px;
-    background-color: #006400; /* Darker green color */
+    background-color: #006400;
     color: white;
     cursor: pointer;
     font-weight: bold;
 }
 
 .top-search button:hover {
-    background-color: #004d00; /* Darker shade on hover */
+    background-color: #004d00;
 }
 
-.home-container {
+.content-container {
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    width: 80%;
-    max-width: 1200px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     padding: 2rem;
-    margin: auto; /* Center the container */
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.vertical-line {
-    width: 2px;
-    height: 100%; /* Full height of the container */
-    background-color: white;
-    margin-right: 2rem;
+    margin-bottom: 2rem;
 }
 
 .content {
     text-align: left;
-    background: rgba(0, 100, 0, 0.5); /* Transparent green background */
+    background: rgba(0, 100, 0, 0.5);
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    flex: 1; /* Allow the content to take up available space */
-    margin-right: 2rem; /* Add some space between the content and results container */
+    width: 80%;
+    max-width: 1200px;
 }
 
 .content h1 {
     margin: 0;
-    font-size: 4rem; /* Larger text for the title */
+    font-size: 4rem;
     font-weight: bold;
     color: white;
     text-transform: uppercase;
@@ -133,21 +117,27 @@ nav a
 
 .content p {
     margin-top: 1rem;
-    font-size: 1.5rem; /* Larger text for the content */
+    font-size: 1.5rem;
     line-height: 1.6;
     color: white;
 }
 
 .results-container {
-    background: rgba(255, 255, 255, 0.3); /* Transparent white background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.3);
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    flex: 1; /* Allow the results container to take up available space */
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .result-item {
     margin-bottom: 2rem;
+    width: 100%;
 }
 
 .destination-image {
@@ -173,18 +163,18 @@ nav a
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 4px;
-    background-color: #006400; /* Dark green color */
+    background-color: #006400;
     color: white;
     font-weight: bold;
     cursor: pointer;
 }
 
 .visit-button:hover {
-    background-color: #004d00; /* Darker shade on hover */
+    background-color: #004d00;
 }
 
 .contact-container {
-    background-color: rgba(255, 255, 255, 0.5); /* More transparent background */
+    background-color: rgba(255, 255, 255, 0.5);
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -220,18 +210,17 @@ nav a
 .contact-form input,
 .contact-form textarea {
     margin-bottom: 1rem;
-    padding: 1rem; /* Increase padding for larger input fields */
+    padding: 1rem;
     border: 1px solid #ccc;
     border-radius: 4px;
-    background-color: rgba(255, 255, 255, 0.8); /* Transparent input background */
-    font-size: 1rem; /* Increase font size */
-    width: 100%; /* Make inputs full width */
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    width: 100%;
 }
 
 .contact-form textarea {
-    height: 150px; /* Set a specific height for the textarea */
+    height: 150px;
 }
-
 
 .contact-form button {
     padding: 0.5rem;
@@ -252,12 +241,12 @@ nav a
     justify-content: center;
     align-items: center;
     height: 60vh;
-    background: rgba(255, 255, 255, 0.5); /* Slightly transparent background */
-    backdrop-filter: blur(10px); /* Blurry background */
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
 }
 
 .about-content {
-    background: rgba(255, 255, 255, 0.8); /* Slightly transparent content background */
+    background: rgba(255, 255, 255, 0.8);
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -279,8 +268,8 @@ nav a
 .our-team {
     text-align: center;
     padding: 2rem;
-    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
-    backdrop-filter: blur(10px); /* Blurry background */
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
 }
 
 .our-team h1 {
